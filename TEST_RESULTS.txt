@@ -1,0 +1,41 @@
+ShopEasy - Unit 5, Experiment 1 - output of: npm run test:report
+
+
+> ecommerce-app@1.0.0 test:report
+> node --no-deprecation node_modules/jest/bin/jest.js --verbose
+
+PASS src/__tests__/Checkout.test.jsx
+  ✓ shows validation errors for an empty form, then places the order when the details are valid (1226 ms)
+
+PASS src/__tests__/Home.test.jsx
+  ✓ shows a loading indicator, then the products, and typing in the search box filters them (752 ms)
+
+PASS src/__tests__/Cart.test.jsx
+  ✓ changing quantity and removing an item updates the cart and the totals (225 ms)
+
+PASS src/__tests__/ProductCard.test.jsx
+  ✓ shows the product details and adds the product to the cart each time Add is clicked (147 ms)
+
+PASS src/__tests__/ProductList.test.jsx
+  ✓ shows a card for every product, and only the matching ones when filters and sorting are set (203 ms)
+
+PASS src/__tests__/productFilter.test.js
+  ✓ brand, price, rating and sort filters each work, and they combine (3 ms)
+
+PASS src/__tests__/calculateTotals.test.js
+  ✓ totals follow the discount and delivery rules at each price band (1 ms)
+
+PASS src/__tests__/cartReducer.test.js
+  ✓ adding a product puts it in the cart, adding it again raises its quantity, removing deletes only that product (17 ms)
+
+PASS src/__tests__/cartQuantity.test.js
+  ✓ updateQuantity sets the quantity, a quantity below 1 removes the item, and other items are untouched (3 ms)
+
+PASS src/__tests__/productApi.test.js
+  ✓ fetchProducts calls GET /products, filters by search text and category, and passes failures on (6 ms)
+
+Test Suites: 10 passed, 10 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        7.153 s
+Ran all test suites.

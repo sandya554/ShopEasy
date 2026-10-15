@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* (e) Accessibility: a clear outline for keyboard users (mouse clicks do not show it) */
+@layer base {
+  :focus-visible {
+    outline: 3px solid #4f46e5;
+    outline-offset: 2px;
+  }
+  /* the header is dark indigo, so use a light outline there */
+  header :focus-visible {
+    outline-color: #ffffff;
+  }
+}
+
+/* (e) Respect the "reduce motion" setting of the device */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
